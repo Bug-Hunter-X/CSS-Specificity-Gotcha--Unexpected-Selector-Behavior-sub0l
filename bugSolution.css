@@ -1,0 +1,19 @@
+One solution is to be more explicit and avoid overly complex selectors. Use more specific selectors that are more likely to directly target the element you intend without relying on inheritence. Use !important only as a last resort and understand its impact on maintainability. 
+Another solution is to use the CSS Developer Tools in your browser to inspect the computed styles of the element and identify the rule that is being applied. This can help you to understand why the element is styled the way it is and how to change it. 
+
+```css
+/* More explicit selectors */
+#very-special.special div {
+  color: orange;
+}
+
+/* Using the :not pseudo-class (be careful with this approach as it can lead to complex selectors)*/
+#very-special div:not(.special) {
+  color: green;
+}
+
+/* Another more explicit solution */
+.special {
+  color: red !important; /* Use with caution! */
+}
+```
