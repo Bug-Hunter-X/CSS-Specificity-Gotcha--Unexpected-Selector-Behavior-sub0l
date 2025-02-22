@@ -1,0 +1,3 @@
+This repository demonstrates a common CSS issue related to specificity.  The `bug.css` file contains CSS rules that exhibit unexpected behavior due to how CSS specificity works. The `bugSolution.css` file provides solutions and workarounds.
+
+The issue arises from the complex interplay of ID, class, and element selectors, and how they interact with inheritance.  The readme.md file explains these scenarios in more detail and suggests best practices.
