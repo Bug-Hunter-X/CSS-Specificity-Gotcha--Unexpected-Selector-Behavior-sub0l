@@ -1,0 +1,25 @@
+The CSS specificity can be really confusing sometimes and cause unexpected behavior.  For example, consider this scenario:
+
+```css
+div {
+  color: blue;
+}
+
+.special {
+  color: red;
+}
+
+#very-special {
+  color: green;
+}
+
+#very-special.special {
+  color: purple;
+}
+
+#very-special.special div {
+  color: orange;
+}
+```
+
+You might expect that the `#very-special.special div` selector would override all others due to its specificity. However, this isn't always the case depending on how the element is nested in the HTML.  Understanding how the browser calculates specificity is crucial.
